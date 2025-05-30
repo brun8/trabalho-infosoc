@@ -5,7 +5,7 @@ import { useState } from "react"
 import { OpcaoResposta } from "./components/opcao-resposta"
 
 export default function Jogo() {
-  const [passo, setPasso] = useState(0)
+  const [passo,] = useState(0)
   const conteudo = passos[passo]
   if (!conteudo) {
     return <div />
