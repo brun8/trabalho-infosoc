@@ -1,24 +1,27 @@
 import { Opcao } from "@/types/jogo";
-import { useState } from "react";
 
-export function OpcaoResposta({ op }: { op: Opcao }) {
-  const [selected, setSelected] = useState(false)
-
-  function handleClick() {
-    setSelected((cur) => !cur)
-  }
-
+type Props = {
+  op: Opcao,
+  selected: boolean
+  toggle: () => void
+}
+export function OpcaoResposta({ op, selected, toggle }: Props) {
   return (
     <button
       className={`
         p-4 w-full text-center mx-auto
         bg-neutral-600 hover:bg-neutral-700
         hover:cursor-pointer
-        rounded-md
+        border-2 rounded-md
+        transition-all duration-300
+        ${selected
+          ? "border-blue-400"
+          : "border-transparent"
+        }
       `}
-      onClick={handleClick}
+      onClick={toggle}
     >
-      {selected ? "AAAAAAAAAAAAAAAA" : op.texto}
+      {op.texto}
     </button >
   )
 }

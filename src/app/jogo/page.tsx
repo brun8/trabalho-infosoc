@@ -1,40 +1,44 @@
 "use client"
 
-import { passos } from "@/content/passos"
 import { useState } from "react"
-import { OpcaoResposta } from "./components/opcao-resposta"
+import { Pergunta } from "./components/pergunta"
+import { passos } from "@/content/passos"
+import { Button } from "@/components/ui/button"
+import { ChevronLeft, ChevronRight } from 'lucide-react';
+
+const total = Object.keys(passos).length
 
 export default function Jogo() {
-  const [passo,] = useState(0)
-  const conteudo = passos[passo]
-  if (!conteudo) {
-    return <div />
-  }
+  const [passo, setPasso] = useState(0)
+
   return (
-    <div
-      className="flex min-h-screen"
-    >
-      <div className="min-h-full w-1/2 flex items-center justify-center">
-        <div className="h-5/6 bg-neutral-200 rounded-md p-4 w-5/6 py-4">
-          ilustração
-        </div>
-      </div>
-      <div className="min-h-full w-1/2 bg-neutral-800 p-20 text-center">
-        <div className="text-neutral-100 flex flex-col item-center h-full p-4 space-y-8">
-          <h1
-            className="font-bold text-3xl"
+    <div className="relative">
+      <div
+        className="flex max-w-screen overflow-x-scroll snap-x snap-mandatory"
+      >
+        {passos.map((_, idx) => (
+          <Pergunta key={idx} num={idx} />
+        ))}
+        <div
+          className="
+          absolute bottom-8 right-8
+          flex items-center gap-3
+        "
+        >
+          <Button
+            variant="secondary"
+            disabled={passo === 0}
+            onClick={() => setPasso(passo => passo - 1)}
           >
-            {conteudo.pergunta}
-          </h1>
-          <div className="space-y-4 min-w-[500px]">
-            {conteudo.opcoes.map((op, idx) => (
-              <OpcaoResposta
-                key={idx}
-                op={op}
-              />
-            ))
-            }
-          </div>
+            <ChevronLeft />
+          </Button>
+          <Button
+            variant="secondary"
+            disabled={passo === total - 1}
+            onClick={() => setPasso(passo => passo + 1)}
+          >
+            <ChevronRight />
+          </Button>
         </div>
       </div>
     </div>
