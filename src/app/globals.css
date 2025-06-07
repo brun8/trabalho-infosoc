@@ -120,3 +120,11 @@
     @apply bg-background text-foreground;
   }
 }
+
+.debug {
+  @apply border-2 border-red-400;
+}
+
+.debug-2 {
+  @apply border-2 border-blue-400;
+}

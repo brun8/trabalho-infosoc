@@ -1,9 +1,12 @@
 import { passos } from "@/content/passos"
 import { OpcaoResposta } from "./opcao-resposta"
-import { useState } from "react"
 
-export function Pergunta({ num }: { num: number }) {
-  const [selectedOp, setSelectedOp] = useState<number>()
+type Props = {
+  num: number,
+  selected?: number
+  setSelected: (_: number) => void
+}
+export function Pergunta({ num, selected, setSelected }: Props) {
   const conteudo = passos[num]
 
   if (!conteudo) {
@@ -31,8 +34,8 @@ export function Pergunta({ num }: { num: number }) {
               <OpcaoResposta
                 key={idx}
                 op={op}
-                selected={selectedOp === idx}
-                toggle={() => setSelectedOp(idx)}
+                selected={selected === idx}
+                toggle={() => setSelected(idx)}
               />
             ))
             }

@@ -1,51 +1,50 @@
 import { Opcao } from "@/types/jogo";
 
-export const passos: { pergunta: string, opcoes: Opcao[], }[] = [
-  {
-    pergunta: "sim ou não?",
-    opcoes: [
-      {
-        texto: "sim",
-        certo: false,
-      },
-      {
-        texto: "nao",
-        certo: false,
-      },
-      {
-        texto: "talvez",
-        certo: true,
-      },
-    ]
-  },
-  {
-    pergunta: "sim ou com certeza?",
-    opcoes: [
-      {
-        texto: "sim",
-        certo: false,
-      },
-      {
-        texto: "com certeza",
-        certo: true,
-      },
-      {
-        texto: "não sei",
-        certo: false,
-      },
-    ]
-  },
-  {
-    pergunta: "neymar ou messi?",
-    opcoes: [
-      {
-        texto: "neymar",
-        certo: true,
-      },
-      {
-        texto: "messi",
-        certo: false,
-      },
-    ]
-  },
-]
+export const passos: {
+  pergunta: string,
+  opcoes: Opcao[],
+  correta: number,
+}[] = [
+    {
+      pergunta: "sim ou não?",
+      correta: 2,
+      opcoes: [
+        {
+          texto: "sim",
+        },
+        {
+          texto: "nao",
+        },
+        {
+          texto: "talvez",
+        },
+      ]
+    },
+    {
+      pergunta: "sim ou com certeza?",
+      correta: 1,
+      opcoes: [
+        {
+          texto: "sim",
+        },
+        {
+          texto: "com certeza",
+        },
+        {
+          texto: "não sei",
+        },
+      ]
+    },
+    {
+      pergunta: "neymar ou messi?",
+      correta: 0,
+      opcoes: [
+        {
+          texto: "neymar",
+        },
+        {
+          texto: "messi",
+        },
+      ]
+    },
+  ]
