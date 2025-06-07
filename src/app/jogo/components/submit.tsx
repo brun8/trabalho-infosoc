@@ -7,13 +7,11 @@ type Props = {
 }
 
 export function SubmitPage({ respostas }: Props) {
-  const [_loading, setLoading] = useState(false)
   const [score, setScore] = useState<number>()
   const total = passos.length
 
   function handleSubmit() {
-    setLoading(true)
-
+    // TODO: animação de loading
     const score = respostas.reduce((acc, cur, idx) => {
       return acc + (cur === passos[idx].correta ? 1 : 0)
     }, 0)
