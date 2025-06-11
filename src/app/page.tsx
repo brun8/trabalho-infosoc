@@ -5,18 +5,8 @@ export default function Home() {
     <div className="">
       <main className="min-h-screen flex flex-col items-center justify-center">
         <div
-          className="space-y-4"
+          className="flex flex-col gap-4"
         >
-          <Link href="/jogo">
-            <div
-              className="
-              p-4 bg-black text-white rounded-sm min-w-48
-              text-center
-            "
-            >
-              Começar jogo 1
-            </div>
-          </Link>
           <Link href="/jogo/teste">
             <div
               className="
@@ -24,7 +14,17 @@ export default function Home() {
               text-center
             "
             >
-              Começar jogo 2
+              jogo teste
+            </div>
+          </Link>
+          <Link href="/jogo/banco-de-dados">
+            <div
+              className="
+              p-4 bg-black text-white rounded-sm min-w-48
+              text-center
+            "
+            >
+              banco de dados
             </div>
           </Link>
         </div>
