@@ -15,6 +15,7 @@ export function OpcaoResposta({ op, selected, toggle }: Props) {
         hover:cursor-pointer
         border-2 rounded-md
         transition-all duration-300
+        lg:text-base text-sm
         ${selected
           ? "border-blue-400"
           : "border-transparent"
@@ -23,6 +24,6 @@ export function OpcaoResposta({ op, selected, toggle }: Props) {
       onClick={toggle}
     >
       {op.texto}
-    </button >
+    </button>
   )
 }

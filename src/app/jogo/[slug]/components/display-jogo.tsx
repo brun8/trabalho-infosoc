@@ -23,7 +23,12 @@ export function DisplayJogo({ jogo }: Props) {
   return (
     <div className="relative">
       <div
-        className="flex max-w-screen max-h-screen overflow-y-hidden overflow-x-scroll snap-x snap-mandatory"
+        className="
+          flex flex-col lg:flex-row
+          snap-mandatory snap-y lg:snap-x
+          lg:overflow-y-hidden lg:overflow-x-scroll
+          max-w-screen max-h-screen
+        "
       >
         {jogo.perguntas.map((prg, idx) => (
           <Pergunta

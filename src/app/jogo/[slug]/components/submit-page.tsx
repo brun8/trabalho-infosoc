@@ -12,6 +12,8 @@ export function SubmitPage({ jogo, respostas }: Props) {
   const [enviado, setEnviado] = useState<boolean>(false)
   const total = jogo.perguntas.length
 
+
+
   function handleSubmit() {
     const res = respostas.reduce<number>((acc, cur, idx) => {
       return acc + (cur === jogo.perguntas[idx].resposta ? 1 : 0)
@@ -40,7 +42,7 @@ export function SubmitPage({ jogo, respostas }: Props) {
         </div>
         :
         <Button
-          className="min-w-md h-20 text-lg"
+          className="w-5/6 max-w-md h-20 text-lg"
           onClick={handleSubmit}
         >
           Enviar respostas

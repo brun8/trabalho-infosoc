@@ -5,6 +5,7 @@ export type Jogo = {
 
 export type Pergunta = {
   pergunta: string
+  img_url?: string
   resposta: number
   opcoes: Opcao[]
 }

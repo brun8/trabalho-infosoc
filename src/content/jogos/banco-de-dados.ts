@@ -1,4 +1,6 @@
-export const bancoDeDados = {
+import { Jogo } from "@/types/jogo";
+
+export const bancoDeDados: Jogo = {
   titulo: "jogo teste",
   perguntas: [
     {
@@ -54,6 +56,7 @@ export const bancoDeDados = {
     },
     {
       pergunta: "quando vem o hexa?",
+      img_url: "/minato.jpg",
       resposta: 0,
       opcoes: [
         {
