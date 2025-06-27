@@ -21,7 +21,7 @@ export function FeedbackModal({ jogo }: Props) {
       <DialogTrigger asChild>
         <Button>Feedback</Button>
       </DialogTrigger>
-      <DialogContent className="w-5/6 sm:max-w-4xl max-h-10/12 overflow-y-scroll">
+      <DialogContent className="w-5/6 sm:max-w-4xl max-h-10/12 overflow-y-scroll no-scrollbar">
         <DialogHeader>
           <DialogTitle>{jogo.titulo}</DialogTitle>
           <DialogDescription>

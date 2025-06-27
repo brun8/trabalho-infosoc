@@ -28,6 +28,7 @@ export function DisplayJogo({ jogo }: Props) {
           snap-mandatory snap-y lg:snap-x
           lg:overflow-y-hidden lg:overflow-x-scroll
           max-w-screen max-h-screen
+          no-scrollbar
         "
       >
         {jogo.perguntas.map((prg, idx) => (

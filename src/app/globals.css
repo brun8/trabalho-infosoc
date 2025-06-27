@@ -128,3 +128,7 @@
 .debug-2 {
   @apply border-2 border-blue-400;
 }
+
+@utility no-scrollbar {
+  @apply [scrollbar-width:none] [&::-webkit-scrollbar]:hidden;
+}
