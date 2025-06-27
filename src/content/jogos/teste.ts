@@ -75,7 +75,6 @@ Diante disso, o que Juninho deve entender sobre a situação?`,
     },
     {
       pergunta: "Diante das falhas identificadas, qual deve ser a próxima atitude de Juninho?",
-      img_url: "/minato.jpg",
       resposta: 1,
       opcoes: [
         {

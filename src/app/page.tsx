@@ -14,10 +14,10 @@ export default function Home() {
               text-center
             "
             >
-              jogo teste
+              capítulos 1 e 2
             </div>
           </Link>
-          <Link href="/jogo/banco-de-dados">
+          <Link href="/jogo/banco-de-dados" hidden>
             <div
               className="
               p-4 bg-black text-white rounded-sm min-w-48
