@@ -5,6 +5,7 @@ export const teste: Jogo = {
   perguntas: [
     {
       pergunta: "Juninho ficou muito animado ao saber que trabalhará em um projeto de modernização das escolas públicas. Diante disso, o que representa uma motivação ética adequada para seu envolvimento?",
+      img_url: "/cap-1-img-1.png",
       resposta: 1,
       opcoes: [
         {
