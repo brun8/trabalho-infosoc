@@ -12,4 +12,5 @@ export type Pergunta = {
 
 export type Opcao = {
   texto: string
+  feedback?: string
 }

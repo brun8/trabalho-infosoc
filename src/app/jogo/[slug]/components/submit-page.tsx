@@ -1,6 +1,7 @@
 import { Button } from "@/components/ui/button";
 import { Jogo } from "@/types/jogo";
 import { useState } from "react";
+import { FeedbackModal } from "./feedback-modal";
 
 type Props = {
   jogo: Jogo
@@ -32,13 +33,17 @@ export function SubmitPage({ jogo, respostas }: Props) {
     >
       {enviado
         ?
-        <div className="space-y-4">
+        <div className="space-y-8 flex flex-col items-center">
           <h1 className="font-bold text-6xl">
             {score}/{total}
           </h1>
           {score === total &&
             <p className="text-xl text-center">parabéns</p>
           }
+
+          <div className="mx-auto">
+            <FeedbackModal jogo={jogo} />
+          </div>
         </div>
         :
         <Button
