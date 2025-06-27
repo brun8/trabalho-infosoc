@@ -13,20 +13,18 @@ export function Pergunta({ pergunta, selected, setSelected }: Props) {
     <div
       className="flex flex-col lg:flex-row min-w-screen lg:min-h-screen snap-center snap-always"
     >
-      <div className="min-h-screen w-full lg:w-1/2 flex items-center justify-center p-4 ">
-        <div className="my-auto bg-neutral-200 rounded-md p-4 w-5/6 min-h-11/12">
+      <div className="min-h-screen w-full lg:w-1/2 flex items-center justify-center p-4">
+        <div className="bg-neutral-200 rounded-md p-4 w-5/6 space-y-4">
           {pergunta.img_url &&
-            <div className="aspect-square">
-              <Image
-                src={pergunta.img_url}
-                className="rounded-sm"
-                width={1200}
-                height={720}
-                alt=""
-                quality={100}
-                priority
-              />
-            </div>
+            <Image
+              src={pergunta.img_url}
+              className="rounded-sm"
+              width={1200}
+              height={720}
+              alt=""
+              quality={100}
+              priority
+            />
           }
           <div className="p-3 bg-white rounded-sm">
             <p className="">
