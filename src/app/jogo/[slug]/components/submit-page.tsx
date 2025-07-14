@@ -2,6 +2,8 @@ import { Button } from "@/components/ui/button";
 import { Jogo } from "@/types/jogo";
 import { useState } from "react";
 import { FeedbackModal } from "./feedback-modal";
+import { saveResult } from "@/app/actions";
+import { useRouter } from 'next/navigation';
 
 type Props = {
   jogo: Jogo
@@ -12,15 +14,21 @@ export function SubmitPage({ jogo, respostas }: Props) {
   const [score, setScore] = useState<number>(0)
   const [enviado, setEnviado] = useState<boolean>(false)
   const total = jogo.perguntas.length
+  const router = useRouter()
 
-
-
-  function handleSubmit() {
-    const res = respostas.reduce<number>((acc, cur, idx) => {
+  async function handleSubmit() {
+    const nota = respostas.reduce<number>((acc, cur, idx) => {
       return acc + (cur === jogo.perguntas[idx].resposta ? 1 : 0)
     }, 0)
-    setScore(res)
-    setEnviado(true)
+
+    const res = await saveResult({
+      nota,
+      jogo: "teste"
+    })
+    router.push(`/resultado/${res.id}`)
+    // setScore(nota)
+    // setEnviado(true)
+
   }
 
   return (
