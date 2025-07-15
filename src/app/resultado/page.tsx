@@ -6,6 +6,6 @@ export default async function Page() {
   console.log(res)
 
   return (
-    <div>teste</div>
+    <div>{res.length}</div>
   )
 }
