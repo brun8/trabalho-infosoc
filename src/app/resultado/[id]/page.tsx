@@ -2,17 +2,17 @@ import { FeedbackModal } from "@/app/jogo/[slug]/components/feedback-modal"
 import { jogos } from "@/content/jogos"
 import { db } from "@/server/db"
 import { notFound } from "next/navigation"
+import { GraficoNotas } from "./components/grafico-notas"
 
-type Props = {
-  params: {
-    id: string
-  }
-}
+type Params = Promise<{
+  id: string
+}>
 
-export default async function ResultPage({ params }: Props) {
+export default async function ResultPage({ params }: { params: Params }) {
+  const { id } = await params
   const result = await db.result.findFirst({
     where: {
-      id: params.id
+      id: id
     },
   })
 
@@ -37,12 +37,14 @@ export default async function ResultPage({ params }: Props) {
     return acc
   }, new Map<number, number>())
 
-  console.log({ allResults, notas })
-
-
   const jogo = jogos[result.jogo]
   const total = jogo.perguntas.length
-  console.log(jogo)
+
+  const chartData = Array.from(notas.entries()).map(([key, value]) => ({
+    nota: String(key),
+    quantidade: value,
+  }));
+  chartData.sort((a, b) => parseInt(a.nota) - parseInt(b.nota));
 
   return (
     <div
@@ -53,16 +55,22 @@ export default async function ResultPage({ params }: Props) {
       "
     >
       <div className="space-y-8 flex flex-col items-center">
-        <h1 className="font-bold text-6xl">
-          {result.nota}/{total}
-        </h1>
-        {result.nota === total &&
-          <p className="text-xl text-center">parabéns</p>
-        }
+        <div className="space-y-2">
+          <h1 className="font-bold text-6xl">
+            {result.nota}/{total}
+          </h1>
+          {result.nota === total &&
+            <p className="text-xl text-center">parabéns</p>
+          }
+        </div>
 
         <div className="mx-auto">
           <FeedbackModal jogo={jogo} />
         </div>
+
+        <GraficoNotas
+          chartData={chartData}
+        />
       </div>
     </div>
   )

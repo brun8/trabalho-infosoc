@@ -11,8 +11,9 @@ datasource db {
 }
 
 model Result {
-  id        String  @id @default(cuid())
+  id        String   @id @default(cuid())
   jogo      String
   nota      Int
+  data      DateTime @default(now())
   userEmail String?
 }
