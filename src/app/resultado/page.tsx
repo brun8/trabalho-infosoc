@@ -1,7 +1,7 @@
 import { db } from "@/server/db"
 
 export default async function Page() {
-  const res = await db.resultado.findMany({
+  const res = await db.result.findMany({
   })
   console.log(res)
 
