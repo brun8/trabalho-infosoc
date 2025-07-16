@@ -2,6 +2,8 @@ import { Button } from "@/components/ui/button";
 import { Jogo } from "@/types/jogo";
 import { saveResult } from "@/app/actions";
 import { useRouter } from 'next/navigation';
+import { useState } from "react";
+import { toast } from "sonner";
 
 type Props = {
   jogo: Jogo
@@ -9,21 +11,27 @@ type Props = {
 }
 
 export function SubmitPage({ jogo, respostas }: Props) {
-  // const [score, setScore] = useState<number>(0)
-  // const [enviado, setEnviado] = useState<boolean>(false)
-  // const total = jogo.perguntas.length
   const router = useRouter()
+  const [pending, setPending] = useState(false)
 
   async function handleSubmit() {
+    setPending(true)
     const nota = respostas.reduce<number>((acc, cur, idx) => {
       return acc + (cur === jogo.perguntas[idx].resposta ? 1 : 0)
     }, 0)
 
-    const res = await saveResult({
+    saveResult({
       nota,
       jogo: "teste"
     })
-    router.push(`/resultado/${res.id}`)
+      .then((res) => {
+        router.push(`/resultado/${res.id}`)
+      })
+      .catch((err) => {
+        console.error(err)
+        toast.error("Erro ao salvar resultado")
+      })
+      .finally(() => setPending(false))
     // setScore(nota)
     // setEnviado(true)
   }
@@ -37,10 +45,14 @@ export function SubmitPage({ jogo, respostas }: Props) {
       "
     >
       <Button
+        disabled={pending}
         className="w-5/6 max-w-md h-20 text-lg"
         onClick={handleSubmit}
       >
-        Enviar respostas
+        {pending
+          ? "Enviando..."
+          : "Enviar respostas"
+        }
       </Button>
     </div>
   )
