@@ -16,3 +16,8 @@ model Result {
   nota      Int
   userEmail String?
 }
+
+model Professor {
+  id      Int    @id @default(autoincrement())
+  clerkId String
+}
