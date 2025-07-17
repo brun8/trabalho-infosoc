@@ -34,6 +34,7 @@ export function DisplayJogo({ jogo }: Props) {
         {jogo.perguntas.map((prg, idx) => (
           <Pergunta
             key={idx}
+            historia={prg.historia}
             pergunta={prg}
             selected={respostas[idx]}
             setSelected={(val: number) => handleResposta(idx, val)}

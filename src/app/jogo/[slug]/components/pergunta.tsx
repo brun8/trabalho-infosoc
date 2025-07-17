@@ -4,11 +4,12 @@ import Image from "next/image"
 
 type Props = {
   pergunta: Pergunta
+  historia?: string
   selected?: number
   setSelected: (_: number) => void
 }
 
-export function Pergunta({ pergunta, selected, setSelected }: Props) {
+export function Pergunta({ pergunta, historia, selected, setSelected }: Props) {
   return (
     <div
       className="flex flex-col lg:flex-row min-w-screen lg:min-h-screen snap-center snap-always"
@@ -28,7 +29,7 @@ export function Pergunta({ pergunta, selected, setSelected }: Props) {
           }
           <div className="p-3 bg-white rounded-sm">
             <p className="">
-              Juninho irá iniciar seu primeiro dia na empresa Fazemos de Tudo e Mais um Pouco LTDA. Ele precisa chegar às 8h. Então ele acorda cedo, toma seu café da manhã e pega a condução às 7h para chegar no horário. Na empresa, Juninho conhece seus colegas e o time que irá fazer parte. Sua gerente, Alana o apresenta para o desenvolvedor Sênior que irá acompanhá-lo.
+              {historia}
             </p>
           </div>
         </div>
