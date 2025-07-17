@@ -1,12 +1,12 @@
 import { Jogo } from "@/types/jogo";
 
-export const teste: Jogo = {
-  titulo: "Capítulos 1 e 2",
+export const sbc: Jogo = {
+  titulo: "O Código Invisível",
   perguntas: [
     {
       pergunta: "Juninho ficou muito animado ao saber que trabalhará em um projeto de modernização das escolas públicas. Diante disso, o que representa uma motivação ética adequada para seu envolvimento?",
       historia: "Juninho irá iniciar seu primeiro dia na empresa Fazemos de Tudo e Mais um Pouco LTDA. Ele precisa chegar às 8h. Então ele acorda cedo, toma seu café da manhã e pega a condução às 7h para chegar no horário. Na empresa, Juninho conhece seus colegas e o time que irá fazer parte. Sua gerente, Alana o apresenta para o desenvolvedor Sênior que irá acompanhá-lo.",
-      img_url: "/cap-1-img-1-resized.png",
+      img_url: "/cap-1-img-1.png",
       resposta: 1,
       opcoes: [
         {
@@ -56,6 +56,7 @@ export const teste: Jogo = {
       pergunta: "Diante disso, o que Juninho deve entender sobre a situação?",
       historia: `Juninho não tem certeza se os “ajustes” que André mencionou já foram feitos no sistema. Ele se sente incomodado com a ideia de alterar dados reais. Ao questionar como a privacidade dos dados sensíveis dos alunos será garantida, Juninho ouve do André:
 "Não se preocupa com isso agora, Juninho. Nosso foco é entregar rápido."`,
+      img_url: "/cap-2-img-1.png",
       resposta: 2,
       opcoes: [
         {
@@ -79,6 +80,7 @@ export const teste: Jogo = {
     {
       pergunta: "Diante das falhas identificadas, qual deve ser a próxima atitude de Juninho?",
       historia: "Ao término da reunião, André pede que Juninho faça uma análise detalhada sobre como os dados alunos estão sendo armazenados no banco de dados. Juninho acessa o sistema e percebe alguns problemas: dados sem criptografia, permissões abertas a muitos usuários, e tabelas que armazenam informações pessoais e comportamentais sem qualquer anonimização.",
+      img_url: "/cap-2-img-2.png",
       resposta: 1,
       opcoes: [
         {
@@ -102,6 +104,7 @@ export const teste: Jogo = {
     {
       pergunta: "Como Juninho deve interpretar essa resposta do time?",
       historia: `Juninho percebe que os dados dos alunos estão sendo armazenados sem criptografia e que o sistema não tem proteção contra acessos indevidos. Ele alerta os colegas, mas ouve: “Depois a gente corrige, por enquanto o MVP tem que funcionar.”`,
+      img_url: "/cap-3-img-1.png",
       resposta: 3,
       opcoes: [
         {
@@ -125,6 +128,7 @@ export const teste: Jogo = {
     {
       pergunta: "O que essa atitute do Juninho representa?",
       historia: "Ao perceber o problema de segurança e a postura omissa da equipe, Juninho lembra de algo que aprendeu na faculdade. Ele então abre o Código de Ética da SBC, que mantém salvo em seu computador, e procura referências sobre o assunto.",
+      img_url: "/cap-3-img-2.png",
       resposta: 0,
       opcoes: [
         {
@@ -148,6 +152,7 @@ export const teste: Jogo = {
     {
       pergunta: "O que essa atitude representa em termos éticos?",
       historia: "Juninho, mesmo receoso de sofrer represálias, decide entregar um relatório técnico à gerente do projeto, explicando os riscos de segurança que havia identificado.",
+      img_url: "/cap-4-img-1.png",
       resposta: 2,
       opcoes: [
         {
@@ -155,7 +160,7 @@ export const teste: Jogo = {
           feedback: "Incorreta. Adiar a comunicação de riscos pode causar mais danos. Princípios como 2.4 e 1.2 exigem ação preventiva.",
         },
         {
-          texto: "#REVISAR#Um comportamento correto, pois observou o desleixo da gerência e agiu se sobrepondo a hierarquia.",
+          texto: "Um comportamento correto, pois observou o desleixo da gerência e agiu se sobrepondo a hierarquia.",
           feedback: "Incorreta. Não foi impulsivo, foi ético e fundamentado. Ele agiu com base em evidências e responsabilidade.",
         },
         {
