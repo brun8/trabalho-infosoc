@@ -11,13 +11,28 @@ datasource db {
 }
 
 model Result {
-  id        String  @id @default(cuid())
+  id        String   @id @default(cuid())
   jogo      String
   nota      Int
   userEmail String?
+  data      DateTime @default(now())
 }
 
 model Professor {
   id      Int    @id @default(autoincrement())
   clerkId String
+}
+
+model Turma {
+  id      String       @id @default(cuid())
+  name    String
+  clerkId String
+  alunos  AlunoTurma[]
+}
+
+model AlunoTurma {
+  id         Int    @id @default(autoincrement())
+  emailAluno String
+  turma      Turma  @relation(fields: [turmaId], references: [id])
+  turmaId    String
 }

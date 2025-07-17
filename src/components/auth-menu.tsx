@@ -2,57 +2,69 @@ import { Button } from "@/components/ui/button"
 import {
   DropdownMenu,
   DropdownMenuContent,
-  DropdownMenuGroup,
   DropdownMenuItem,
-  DropdownMenuLabel,
-  DropdownMenuPortal,
-  DropdownMenuSeparator,
-  DropdownMenuShortcut,
-  DropdownMenuSub,
-  DropdownMenuSubContent,
-  DropdownMenuSubTrigger,
   DropdownMenuTrigger,
 } from "@/components/ui/dropdown-menu"
-import { SignedIn, SignedOut, SignInButton, SignOutButton, SignUpButton, UserButton } from "@clerk/nextjs"
+import { db } from "@/server/db"
+import { SignedIn, SignedOut, SignInButton, SignUpButton, UserButton } from "@clerk/nextjs"
+import { auth } from "@clerk/nextjs/server"
 import { Menu } from "lucide-react"
+import Link from "next/link"
 
-export function AuthMenu() {
+export async function AuthMenu() {
+  const user = await auth()
+  const professor = user.isAuthenticated && await db.professor.findFirst({
+    where: {
+      clerkId: user.userId
+    }
+  })
+
   return (
-    <DropdownMenu>
-      <DropdownMenuTrigger asChild>
-        <Button
-          variant="ghost"
+    <>
+      <SignedIn>
+        <div
           className="
             absolute top-10 right-10
-            size-10 rounded-full
-            cursor-pointer bg-white shadow-accent
+            flex flex-col gap-4 items-center
           "
         >
-          <Menu />
-        </Button>
-      </DropdownMenuTrigger>
-      <DropdownMenuContent className="w-56" align="start">
-        {/* mostrar turma se for professor */}
-        <SignedOut>
-          <DropdownMenuItem asChild>
-            <SignInButton />
-          </DropdownMenuItem>
-          <DropdownMenuItem asChild>
-            <SignUpButton />
-          </DropdownMenuItem>
-        </SignedOut>
-        <SignedIn>
-          <DropdownMenuItem>
-            <UserButton />
-          </DropdownMenuItem>
-          <DropdownMenuItem asChild>
-            <div className="w-full">
-              <SignOutButton />
-            </div>
-          </DropdownMenuItem>
-        </SignedIn>
-      </DropdownMenuContent>
-    </DropdownMenu>
+          <UserButton />
+          <DropdownMenu>
+            <DropdownMenuTrigger asChild>
+              <Button variant="ghost" className="rounded-full size-8">
+                <Menu />
+              </Button>
+            </DropdownMenuTrigger>
+            <DropdownMenuContent>
+              <DropdownMenuItem>
+                {professor &&
+                  <Link href="/turmas">
+                    Turmas
+                  </Link>
+                }
+              </DropdownMenuItem>
+            </DropdownMenuContent>
+          </DropdownMenu>
+        </div>
+      </SignedIn>
+      <SignedOut>
+        <DropdownMenu>
+          <DropdownMenuTrigger asChild>
+            <Button variant="ghost" className="rounded-full size-8">
+              <Menu />
+            </Button>
+          </DropdownMenuTrigger>
+          <DropdownMenuContent>
+            <DropdownMenuItem>
+              <SignUpButton />
+            </DropdownMenuItem>
+            <DropdownMenuItem>
+              <SignInButton />
+            </DropdownMenuItem>
+          </DropdownMenuContent>
+        </DropdownMenu>
+      </SignedOut>
+    </>
   )
 }
 

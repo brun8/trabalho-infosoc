@@ -1,7 +1,7 @@
 "use server"
 
 import { db } from "@/server/db"
-import { currentUser } from "@clerk/nextjs/server"
+import { auth, currentUser } from "@clerk/nextjs/server"
 
 export async function saveResult(
   opts: {
@@ -20,4 +20,26 @@ export async function saveResult(
   })
 
   return res
+}
+
+export async function createTurma(name: string) {
+  const user = await auth()
+  if (!user.isAuthenticated) { return }
+  return await db.turma.create({
+    data: {
+      name,
+      clerkId: user.userId || ""
+    }
+  })
+}
+
+export async function addAlunos(turmaId: string, emails: string[]) {
+  const user = await auth()
+  if (!user.isAuthenticated) { return }
+  return await db.alunoTurma.createMany({
+    data: emails.map((email) => ({
+      turmaId,
+      emailAluno: email,
+    }))
+  })
 }
