@@ -22,7 +22,7 @@ export function SubmitPage({ jogo, respostas }: Props) {
 
     saveResult({
       nota,
-      jogo: "teste"
+      jogo: "teste",
     })
       .then((res) => {
         router.push(`/resultado/${res.id}`)
