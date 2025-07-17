@@ -1,8 +1,10 @@
 import { Jogo } from "@/types/jogo"
-import { teste } from "./teste"
+import { sbc } from "./sbc"
+import { plagio } from "./plagio"
 import { bancoDeDados } from "./banco-de-dados"
 
 export const jogos: Record<string, Jogo> = {
-  teste,
+  "sbc": sbc,
+  "plagio": plagio,
   "banco-de-dados": bancoDeDados,
 }

@@ -7,14 +7,24 @@ export default function Home() {
         <div
           className="flex flex-col gap-4"
         >
-          <Link href="/jogo/teste">
+          <Link href="/jogo/sbc">
             <div
               className="
               p-4 bg-black text-white rounded-sm min-w-48
               text-center
             "
             >
-              capítulos 1 e 2
+              O Código Invisível
+            </div>
+          </Link>
+          <Link href="/jogo/plagio">
+            <div
+              className="
+              p-4 bg-black text-white rounded-sm min-w-48
+              text-center
+            "
+            >
+              A Imitação
             </div>
           </Link>
           <Link href="/jogo/banco-de-dados" hidden>
@@ -24,7 +34,7 @@ export default function Home() {
               text-center
             "
             >
-              banco de dados
+              Banco de Dados
             </div>
           </Link>
         </div>
