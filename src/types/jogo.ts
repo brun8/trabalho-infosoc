@@ -1,5 +1,6 @@
 export type Jogo = {
   titulo: string
+  slug: string
   perguntas: Pergunta[]
 }
 

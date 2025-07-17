@@ -1,6 +1,7 @@
 import { Jogo } from "@/types/jogo";
 
 export const sbc: Jogo = {
+  slug: "sbc",
   titulo: "O Código Invisível",
   perguntas: [
     {
@@ -196,7 +197,7 @@ export const sbc: Jogo = {
         },
       ]
     },
-  {
+    {
       pergunta: "O que isso demonstra?",
       historia: "Graças à postura ética de Juninho, a gerência conseguiu conversar e ser transparente com o cliente sobre o projeto passar por ajustes. Foi possível corrigir os problemas de segurança e privacidade antes do lançamento.",
       resposta: 0,

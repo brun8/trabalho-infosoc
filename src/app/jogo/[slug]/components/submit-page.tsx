@@ -22,10 +22,11 @@ export function SubmitPage({ jogo, respostas }: Props) {
 
     saveResult({
       nota,
-      jogo: "teste",
+      jogo: jogo.slug,
     })
       .then((res) => {
         router.push(`/resultado/${res.id}`)
+        toast.success("Respostas enviadas, redirecionando")
       })
       .catch((err) => {
         console.error(err)

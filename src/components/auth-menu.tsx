@@ -48,21 +48,28 @@ export async function AuthMenu() {
         </div>
       </SignedIn>
       <SignedOut>
-        <DropdownMenu>
-          <DropdownMenuTrigger asChild>
-            <Button variant="ghost" className="rounded-full size-8">
-              <Menu />
-            </Button>
-          </DropdownMenuTrigger>
-          <DropdownMenuContent>
-            <DropdownMenuItem>
-              <SignUpButton />
-            </DropdownMenuItem>
-            <DropdownMenuItem>
-              <SignInButton />
-            </DropdownMenuItem>
-          </DropdownMenuContent>
-        </DropdownMenu>
+        <div
+          className="
+            absolute top-10 right-10
+            flex flex-col gap-4 items-center
+          "
+        >
+          <DropdownMenu>
+            <DropdownMenuTrigger asChild>
+              <Button variant="ghost" className="rounded-full size-8">
+                <Menu />
+              </Button>
+            </DropdownMenuTrigger>
+            <DropdownMenuContent>
+              <DropdownMenuItem>
+                <SignUpButton />
+              </DropdownMenuItem>
+              <DropdownMenuItem>
+                <SignInButton />
+              </DropdownMenuItem>
+            </DropdownMenuContent>
+          </DropdownMenu>
+        </div>
       </SignedOut>
     </>
   )

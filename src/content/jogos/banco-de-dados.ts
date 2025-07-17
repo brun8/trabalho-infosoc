@@ -2,6 +2,7 @@ import { Jogo } from "@/types/jogo";
 
 export const bancoDeDados: Jogo = {
   titulo: "jogo teste",
+  slug: "banco-de-dados",
   perguntas: [
     {
       pergunta: "guardar senha em texto normal",
