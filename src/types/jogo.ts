@@ -4,6 +4,7 @@ export type Jogo = {
 }
 
 export type Pergunta = {
+  historia?: string
   pergunta: string
   img_url?: string
   resposta: number
