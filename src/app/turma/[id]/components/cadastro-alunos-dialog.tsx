@@ -51,7 +51,7 @@ export function CadastroAlunosDialog({ turmaId }: { turmaId: string }) {
         </DialogHeader>
         <div className="space-y-2 text-sm">
           <p>
-            Inserir emails separados por &quot,&quot
+            Inserir emails separados por &quot;,&quot;
           </p>
           <Input
             placeholder="joao@email.com,maria@email.com"
@@ -67,7 +67,7 @@ export function CadastroAlunosDialog({ turmaId }: { turmaId: string }) {
           <Button
             onClick={handleSubmit}
           >
-            Criar turma
+            Adicionar alunos
           </Button>
         </DialogFooter>
       </DialogContent>
