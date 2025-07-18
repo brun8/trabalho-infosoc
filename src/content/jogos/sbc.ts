@@ -31,7 +31,7 @@ export const sbc: Jogo = {
     {
       pergunta: "O que Juninho deve pensar sobre isso?",
       historia: "André começa a introduzir o sistema para Juninho. Ele vai repassando com calma as regras de negócio e tudo que foi construído até o momento. Juninho ouve atentamente a explicação do André. Ele menciona que algumas escolas pediram para “ajustar” certos dados no sistema para que os indicadores fiquem mais favoráveis, pois isso ajudaria a conseguir mais recursos financeiros do estado.",
-      img_url: "/cap-1-img-2-resized.png",
+      img_url: "/cap-1-img-2.png",
       resposta: 2,
       opcoes: [
         {
@@ -44,7 +44,7 @@ export const sbc: Jogo = {
         },
         {
           texto: "Manipular dados compromete a confiança e vai contra o propósito do projeto.",
-          feedback: "Correto. A honestidade e o compromisso com o bem público devem prevalecer, mesmo diante de pressões externas.",
+          feedback: "Correta. A honestidade e o compromisso com o bem público devem prevalecer, mesmo diante de pressões externas.",
         },
         {
           texto: "Talvez isso nem afete ninguém diretamente, então pode passar despercebido.",
@@ -118,11 +118,11 @@ export const sbc: Jogo = {
         },
         {
           texto: "Não é seu papel questionar decisões se ele não for o responsável técnico.",
-          feedback: "Incorreta. Todos têm responsabilidade ética, mesmo que não sejam líderes técnicos. O código é dever de todos (4.1)."
+          feedback: "Incorreta. Todos têm responsabilidade ética, mesmo que não sejam líderes técnicos. O código é dever de todos 4.1."
         },
         {
           texto: "A falta de segurança em qualquer versão coloca todos os usuários em risco",
-          feedback: "Correto. Mesmo em versões iniciais, falhas de segurança podem gerar danos. Isso fere os princípios 2.1, 2.9 e 1.2."
+          feedback: "Correta. Mesmo em versões iniciais, falhas de segurança podem gerar danos. Isso fere os princípios 2.1, 2.9 e 1.2."
         }
       ]
     },
@@ -134,7 +134,7 @@ export const sbc: Jogo = {
       opcoes: [
         {
           texto: "Uma demonstração de responsabilidade ética e profissional.",
-          feedback: "Correto. Consultar o código mostra zelo, responsabilidade e disposição para agir conforme os princípios (3.4, 4.1).",
+          feedback: "Correta. Consultar o código mostra zelo, responsabilidade e disposição para agir conforme os princípios (3.4, 4.1).",
         },
         {
           texto: "Um gesto simbólico, mas ineficaz, já que ele não tem poder de decisão.",
@@ -166,7 +166,7 @@ export const sbc: Jogo = {
         },
         {
           texto: "Uma demonstração de honestidade, responsabilidade e compromisso com a sociedade.",
-          feedback: "Correto. Juninho demonstrou compromisso com os princípios 1.3, 2.4 e 3.2 ao agir com responsabilidade social.",
+          feedback: "Correta. Juninho demonstrou compromisso com os princípios 1.3, 2.4 e 3.2 ao agir com responsabilidade social.",
         },
         {
           texto: "Algo arriscado, mas necessário apenas quando houver incidentes confirmados.",
@@ -177,6 +177,7 @@ export const sbc: Jogo = {
     {
       pergunta: "Qual a importância dessa escolha?",
       historia: "Juninho observou que uma atitude precisava ser tomada. O projeto é muito importante para ele e para a empresa. Por isso, não apenas relatou os riscos, mas também baseou suas preocupações no Código de Ética da SBC.",
+      img_url: "/cap-4-img-2.png",
       resposta: 1,
       opcoes: [
         {
@@ -200,11 +201,12 @@ export const sbc: Jogo = {
     {
       pergunta: "O que isso demonstra?",
       historia: "Graças à postura ética de Juninho, a gerência conseguiu conversar e ser transparente com o cliente sobre o projeto passar por ajustes. Foi possível corrigir os problemas de segurança e privacidade antes do lançamento.",
+      img_url: "/cap-5-img-1.png",
       resposta: 0,
       opcoes: [
         {
           texto: "Que princípios éticos aplicados corretamente fortalecem a qualidade e o impacto do sistema.",
-          feedback: "Correto. Esse desfecho mostra como ética gera valor, confiança e segurança — alinhado aos princípios 1.2, 1.7, 3.3 e 3.2.",
+          feedback: "Correta. Esse desfecho mostra como ética gera valor, confiança e segurança — alinhado aos princípios 1.2, 1.7, 3.3 e 3.2.",
         },
         {
           texto: "Que é possível adiar decisões técnicas e consertar depois, se houver pressão.",
@@ -223,6 +225,7 @@ export const sbc: Jogo = {
     {
       pergunta: "Por que a campanha de conscientização com professores e diretores foi uma boa prática?",
       historia: "A empresa promoveu uma campanha explicando como a plataforma funciona e reforçando a importância da ética na tecnologia. Juninho ficou feliz ao ver que a empresa se preocupava com o impacto social do sistema.",
+      img_url: "/cap-5-img-2.png",
       resposta: 3,
       opcoes: [
         {
@@ -239,7 +242,7 @@ export const sbc: Jogo = {
         },
         {
           texto: "Promover transparência e fortalecer a confiança na solução.",
-          feedback: "Correto. Transparência e diálogo com os usuários melhoram a confiança e o impacto social da tecnologia (2.7, 3.3).",
+          feedback: "Correta. Transparência e diálogo com os usuários melhoram a confiança e o impacto social da tecnologia (2.7, 3.3).",
         },
       ]
     }
