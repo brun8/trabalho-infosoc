@@ -8,6 +8,7 @@ export const plagio: Jogo = {
             pergunta: "O que Rafaela deve fazer?",
             historia: "Rafaela está no laboratório de pesquisa da UnB. É sua primeira iniciação científica. Ela está animada com a ideia de explorar o poder do processamento de imagens e sons. Seu orientador sugeriu que ela começasse analisando datasets públicos de imagens. Rafaela encontra um dataset incrível de rostos humanos. Ele foi publicado por um usuário anônimo em um fórum russo, sem qualquer licença ou autor identificado. Ela pensa em usá-lo.",
             resposta: 3,
+            img_url: "/plagio-cap-1-img-1.png",
             opcoes: [
                 {
                     texto: "Usar o dataset, afinal, está disponível na internet.",
@@ -32,6 +33,7 @@ export const plagio: Jogo = {
             pergunta: "Qual das licenças permite isso com maior liberdade desde que o autor seja citado?",
             historia: "Buscando mais repositórios para criar um grande dataset, Rafaela descobre um repositório com dados licenciados em Creative Commons. Ela comemora, mas percebe que há vários tipos de licenças. CC-BY, CC-BY-NC, CC-BY-SA… “Socorro!”, ela pensa. Ela quer usar imagens para treinar um algoritmo e depois apresentar os resultados em um evento da universidade.",
             resposta: 1,
+            img_url: "/plagio-cap-1-img-2.png",
             opcoes: [
                 {
                     texto: "CC-BY-NC",
@@ -55,6 +57,7 @@ export const plagio: Jogo = {
             pergunta: "O que Rafaela deve fazer?",
             historia: `Com o conjunto de dados pronto, Rafaela começa a desenvolver seu algoritmo. Um colega do laboratório, Renan, compartilha com Rafaela um código que ele "achou no GitHub". Ela percebe que o script é idêntico a um artigo recente publicado por outro grupo de pesquisa. Mas Renan diz: "Relaxa, ninguém vai perceber."`,
             resposta: 3,
+            img_url: "/plagio-cap-2-img-1.png",
             opcoes: [
                 {
                     texto: "Ignorar, afinal, quem nunca copiou um código?",
@@ -78,6 +81,7 @@ export const plagio: Jogo = {
             pergunta: "Essa atitute de Renan é:",
             historia: "Rafaela finalizou uma versão satisfatória do projeto e irá apresentá-lo em um seminário na UnB. Para registrar o momento, pediu à sua melhor amiga que gravasse a apresentação. Contudo, Renan, um colega que estava animado com sua fala, também a gravou um trecho e a postou no TikTok sem autorização. O vídeo viralizou e acabou sendo monetizado por ele.",
             resposta: 1,
+            img_url: "/plagio-cap-2-img-2.png",
             opcoes: [
                 {
                     texto: "Errada, pois exige autorização para uso da imagem e voz.",
@@ -100,6 +104,7 @@ export const plagio: Jogo = {
         {
             pergunta: "Rafaela tem direito de compartilhar a apresentação no YouTube?",
             historia: "Rafaela notou que o trecho compartilhado por Renan gerou bastante repercussão. Nos comentários, algumas pessoas questionavam sua fala, mas a maioria estava curiosa para saber mais sobre o algoritmo que ela desenvolveu. Orgulhosa do seu trabalho, Rafaela resolveu compartilhar a apresentação completa no YouTube para explicar melhor o projeto.",
+            img_url: "/plagio-cap-3-img-1.png",
             resposta: 1,
             opcoes: [
                 {
@@ -121,26 +126,27 @@ export const plagio: Jogo = {
             ]
         },
         {
-            pergunta: "",
+            pergunta: "O que a história de Rafaela nos ensina sobre produção e compartilhamento de conhecimento?",
             historia: "Rafaela criou um canal no YouTube para divulgar ciência com responsabilidade Seu cuidado com licenças, citações e ética a levou a inspirar outros estudantes e ser reconhecida como exemplo em ética digital e ciência aberta. Ela aprendeu que respeitar o trabalho dos outros é essencial para inovar e colaborar de forma consciente.",
             resposta: 1,
+            img_url: "/plagio-cap-3-img-2.png",
             opcoes: [
                 {
-                    texto: "",
-                    feedback: ""
+                    texto: "Que compartilhar conteúdo na internet é sempre livre, desde que não seja para ganhar dinheiro.",
+                    feedback: "Incorreta. Mesmo sem fins lucrativos, o compartilhamento exige respeito aos direitos autorais, uso responsável de imagem, e verificação de licenças — como Rafaela demonstrou ao longo da história."
                 },
                 {
-                    texto: "",
-                    feedback: ""
+                    texto: "Que respeitar direitos autorais é burocracia e atrapalha a inovação.",
+                    feedback: "Incorreta. A história mostra exatamente o oposto: respeitar os direitos autorais garante reconhecimento, colaboração ética e fortalece a inovação responsável."
                 },
                 {
-                    texto: "",
-                    feedback: ""
+                    texto: "Que podemos usar qualquer conteúdo desde que mudemos partes ou cite 'inspirado em'.",
+                    feedback: "Incorreta. Isso não elimina a necessidade de autorização e citação adequada. O uso consciente de obras exige licença ou consentimento, como Rafaela aprendeu com seus erros e acertos."
                 },
                 {
-                    texto: "",
-                    feedback: ""
-                },
+                    texto: "Que inovar com ética é possível quando respeitamos autores, citamos fontes e usamos licenças abertas corretamente.",
+                    feedback: "Correta. Esse é o principal ensinamento da jornada de Rafaela: produzir com responsabilidade, respeitar o que já foi criado e contribuir com a ciência de forma ética e colaborativa."
+                }
             ]
         },
     ]

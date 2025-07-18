@@ -6,7 +6,7 @@ export const sbc: Jogo = {
   perguntas: [
     {
       pergunta: "Juninho ficou muito animado ao saber que trabalhará em um projeto de modernização das escolas públicas. Diante disso, o que representa uma motivação ética adequada para seu envolvimento?",
-      historia: "Juninho irá iniciar seu primeiro dia na empresa Fazemos de Tudo e Mais um Pouco LTDA. Ele precisa chegar às 8h. Então ele acorda cedo, toma seu café da manhã e pega a condução às 7h para chegar no horário. Na empresa, Juninho conhece seus colegas e o time que irá fazer parte. Sua gerente, Alana o apresenta para o desenvolvedor Sênior que irá acompanhá-lo.",
+      historia: "Juninho irá iniciar seu primeiro dia na empresa Fazemos de Tudo e Mais um Pouco LTDA. Ele precisa chegar às 8h. Então ele acorda cedo, toma seu café da manhã e pega a condução às 7h para chegar no horário. Na empresa, Juninho conhece seus colegas e o time que irá fazer parte. Sua gerente, Alana o apresenta para o desenvolvedor Sênior que irá acompanhá-lo. Juninho fica bem animado com a empresa e se dedia bastante durante os primeiros meses. Com seis meses de casa, ele é designado para trabalhar em um projeto de modernização das escolas públicas, que visa melhorar a gestão e o acesso à educação.",
       img_url: "/cap-1-img-1.png",
       resposta: 1,
       opcoes: [
@@ -65,7 +65,7 @@ export const sbc: Jogo = {
           feedback: "Incorreta. Privacidade não é um “plus”, é uma obrigação ética e legal. Deixá-la para depois fere o princípio 1.6.",
         },
         {
-          texto: "A fala do gestor indica uma prática comum e aceitável em projetos ágeis.",
+          texto: "A fala do André indica uma prática comum e aceitável em projetos ágeis.",
           feedback: "Incorreta. Pressa não justifica riscos éticos e técnicos. Princípios como 2.5 e 3.6 exigem análise e responsabilidade contínuas.",
         },
         {
@@ -73,7 +73,7 @@ export const sbc: Jogo = {
           feedback: "Correta. Privacidade deve ser considerada desde o design do sistema — é parte essencial do desenvolvimento responsável (1.6, 2.5).",
         },
         {
-          texto: "Como o gestor é experiente, Juninho deve confiar que ele saberá lidar com isso mais tarde.",
+          texto: "Como o André é experiente, Juninho deve confiar que ele saberá lidar com isso mais tarde.",
           feedback: "Incorreta. O apelo à autoridade não substitui a responsabilidade individual ética. O Código exige postura crítica mesmo para iniciantes (4.1).",
         },
       ]
@@ -113,7 +113,7 @@ export const sbc: Jogo = {
           feedback: "Incorreta.MVP não justifica falhas éticas graves. Segurança deve ser parte desde o início. Vai contra os princípios 2.1 e 2.9."
         },
         {
-          texto: "Entregar rápido é mais importante que se preocupar com segurança agora.",
+          texto: "Entregar rápido é mais importante e deve ser a prioridade do momento.",
           feedback: "Incorreta. A entrega não pode comprometer princípios éticos fundamentais."
         },
         {
@@ -145,7 +145,7 @@ export const sbc: Jogo = {
           feedback: "Incorreta. O Código de Ética serve exatamente para orientar decisões práticas no cotidiano.",
         },
         {
-          texto: "Um comportamento que pode soar pedante ou arrogante para o restante da equipe.",
+          texto: "Um comportamento que pode parecer arrogante para o restante da equipe.",
           feedback: "Incorreta. Ética não é arrogância. Promover conduta ética é um dever coletivo, não um ato individual de superioridade.",
         },
       ]
