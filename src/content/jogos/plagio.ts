@@ -80,7 +80,7 @@ export const plagio: Jogo = {
         {
             pergunta: "Essa atitute de Renan é:",
             historia: "Rafaela finalizou uma versão satisfatória do projeto e irá apresentá-lo em um seminário na UnB. Para registrar o momento, pediu à sua melhor amiga que gravasse a apresentação. Contudo, Renan, um colega que estava animado com sua fala, também a gravou um trecho e a postou no TikTok sem autorização. O vídeo viralizou e acabou sendo monetizado por ele.",
-            resposta: 1,
+            resposta: 0,
             img_url: "/plagio-cap-2-img-2.png",
             opcoes: [
                 {
@@ -128,7 +128,7 @@ export const plagio: Jogo = {
         {
             pergunta: "O que a história de Rafaela nos ensina sobre produção e compartilhamento de conhecimento?",
             historia: "Rafaela criou um canal no YouTube para divulgar ciência com responsabilidade Seu cuidado com licenças, citações e ética a levou a inspirar outros estudantes e ser reconhecida como exemplo em ética digital e ciência aberta. Ela aprendeu que respeitar o trabalho dos outros é essencial para inovar e colaborar de forma consciente.",
-            resposta: 1,
+            resposta: 2,
             img_url: "/plagio-cap-3-img-2.png",
             opcoes: [
                 {
@@ -140,12 +140,12 @@ export const plagio: Jogo = {
                     feedback: "Incorreta. A história mostra exatamente o oposto: respeitar os direitos autorais garante reconhecimento, colaboração ética e fortalece a inovação responsável."
                 },
                 {
-                    texto: "Que podemos usar qualquer conteúdo desde que mudemos partes ou cite 'inspirado em'.",
-                    feedback: "Incorreta. Isso não elimina a necessidade de autorização e citação adequada. O uso consciente de obras exige licença ou consentimento, como Rafaela aprendeu com seus erros e acertos."
-                },
-                {
                     texto: "Que inovar com ética é possível quando respeitamos autores, citamos fontes e usamos licenças abertas corretamente.",
                     feedback: "Correta. Esse é o principal ensinamento da jornada de Rafaela: produzir com responsabilidade, respeitar o que já foi criado e contribuir com a ciência de forma ética e colaborativa."
+                },
+                {
+                    texto: "Que podemos usar qualquer conteúdo desde que mudemos partes ou cite 'inspirado em'.",
+                    feedback: "Incorreta. Isso não elimina a necessidade de autorização e citação adequada. O uso consciente de obras exige licença ou consentimento, como Rafaela aprendeu com seus erros e acertos."
                 }
             ]
         },
